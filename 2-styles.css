@@ -1,0 +1,52 @@
+/* 2-styles.css */
+
+/* Hide the default checkbox */
+.toggle-cb {
+    display: none;
+}
+
+/* Style the toggle switch container */
+.toggle {
+    position: relative;
+    width: 60px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    background-color: #ee1c1c; /* Background color for the switch */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Style the inner part of the switch */
+.toggle-inner {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px; /* Width of the inner part */
+    height: 26px; /* Height of the inner part */
+    background-color: #e61414; /* Color of the inner part */
+    border-radius: 50%; /* Make it circular */
+    transition: transform 0.3s ease; /* Add a smooth sliding effect */
+}
+
+/* Style the switch when it's checked */
+.toggle-cb:checked + .toggle-label .toggle-inner {
+    transform: translateX(30px); /* Slide to the right */
+}
+
+/* Style the switch label (the clickable area) */
+.toggle-label {
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Style the switch track (the background) */
+.toggle-switch {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 56px; /* Width of the track */
+    height: 26px; /* Height of the track */
+    background-color: #ccc; /* Color of the track */
+    border-radius: 15px; /* Rounded corners */
+}
