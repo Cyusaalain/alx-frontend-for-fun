@@ -1,0 +1,52 @@
+/* 3-styles.css */
+
+/* Hide the default checkbox */
+.menu-open {
+    display: none;
+}
+
+/* Style the menu button container */
+.menu-open-button {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Style the menu lines (the hamburger icon) */
+.menu-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f11717; /* Color of the lines */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Rotate the lines to create the X shape when the menu is open */
+.menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-open:checked + .menu-open-button .menu-line-2 {
+    opacity: 0;
+}
+
+.menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Style the menu items (the icons) */
+.menu-item {
+    display: block;
+    margin: 10px;
+    font-size: 20px;
+    color: #df0e0e; /* Color of the icons */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Add a smooth color transition */
+}
+
+/* Change the icon color on hover */
+.menu-item:hover {
+    color: #e2d7d7; /* Hover color */
+}
